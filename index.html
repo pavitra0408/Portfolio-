@@ -644,7 +644,7 @@ body.ptr #sl{opacity:.6}
 <script>Object.assign(IMG,{"ajLogo": "img/ajLogo.jpg", "ajPoster": "img/ajPoster.jpg", "ajS0": "img/ajS0.jpg", "ajS1": "img/ajS1.jpg", "ajS2": "img/ajS2.jpg", "ajS3": "img/ajS3.jpg"})</script>
 <script>Object.assign(IMG,{"pdP1": "img/pdP1.jpg", "pdP3": "img/pdP3.jpg", "pdP4": "img/pdP4.jpg", "pdP2": "img/pdP2.jpg", "pdL0": "img/pdL0.jpg", "pdL1": "img/pdL1.jpg"})</script>
 <script>Object.assign(IMG,{"mgCstOut": "img/mgCstOut.png", "mgCstIn": "img/mgCstIn.png", "mgWheels1": "img/mgWheels1.png", "mgWheels2": "img/mgWheels2.png", "mgNodes": "img/mgNodes.png", "mgSpeed": "img/mgSpeed.png", "mgTimeline": "img/mgTimeline.png"})</script>
-<script>Object.assign(IMG,{"kalCard": "img/kalCard.jpg", "kalPoster": "img/kalPoster.jpg", "kalMk1": "img/kalMk1.jpg", "kalMk2": "img/kalMk2.jpg", "kalMk3": "img/kalMk3.jpg"})</script>
+<script>Object.assign(IMG,{"kalCard": "img/kalCard.jpg", "kalPoster": "img/kalPoster.jpg", "kalMk3": "img/kalMk3.jpg", "kalCalm": "img/kalCalm.jpg", "kalBlaze": "img/kalBlaze.jpg", "kalVoid": "img/kalVoid.jpg", "kalBuild": "img/kalBuild.jpg", "kalComplete": "img/kalComplete.jpg"})</script>
 
 
 
@@ -1091,9 +1091,7 @@ function mgfilm(d,p){const i=d.p.indexOf(p),nx=d.p[i+1]||d.p[0],h=d.h,TC=['00:00
 <a class="nextp" href="#/work/${d.k}/${nx.sl}" data-h="${h}" style="margin-top:96px"><small style="color:var(--mute)">Next in ${d.n}</small><h2>${nx.t}</h2></a></div>${contact()}`}
 
 function kalcase(d,p){const h=d.h;
- const mk=[[IMG.kalMk1,'Two hand-finished renders of Shiva are the only face art here — calm, and ignited. Nothing is ever drawn on top of the face itself; igniting the third eye is a crossfade between these two real textures, never an added glow.'],
- [IMG.kalMk2,'The smoke doesn’t fade the face in — it paints it, brush stroke by stroke, across the full sixty seconds, reaching complete form only in the final moment. The payoff is the end, not the middle.'],
- [IMG.kalMk3,'Kick and spectral-flux onset detection run in the browser in real time, frame by frame — not a pre-baked cue list — so the planet’s cracks, the embers and the sparkle hits can never fall out of sync with the track.']];
+ const row=(imgs)=>`<div style="display:flex;gap:16px;width:100%;flex-wrap:wrap">${imgs.map(([img,alt])=>`<img src="${img}" alt="${alt}" loading="lazy" decoding="async" style="flex:1 1 ${Math.floor(90/imgs.length)}%;min-width:240px;width:auto;height:auto;max-width:100%;border-radius:3px;display:block">`).join('')}</div>`;
  return `<div class="pg w" style="padding-bottom:0;--h:${h}"><a class="back" href="#/work/${d.k}">← ${d.n}</a>
 <div class="hd2"><h1 style="font-size:clamp(40px,8vw,120px)">Kal Bhairav</h1><button class="how" id="how" aria-pressed="false" hidden>How?</button></div>
 <p class="sub" style="max-width:52ch;font-size:clamp(18px,1.8vw,24px);color:var(--ink);font-weight:200;margin-top:4px">A destruction ritual. Sound is the only sculptor: smoke paints Shiva’s face into being as a planet in the dark beside him cracks, glows and finally shatters itself — on beats detected live, not scripted in advance.</p>
@@ -1103,7 +1101,9 @@ function kalcase(d,p){const h=d.h;
 <div class="lbl" style="margin-top:64px">The full piece — tap to begin, best with sound</div>
 <div class="cm" style="width:100%;aspect-ratio:16/9;margin-top:20px;border-radius:6px;overflow:hidden;background:#000;box-shadow:0 40px 90px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08)"><iframe src="viz/kalbhairav.html" loading="lazy" title="Kal Bhairav — interactive visualizer" style="width:100%;height:100%;border:0;display:block" allow="autoplay"></iframe></div>
 <div class="lbl" style="margin-top:72px">The making</div>
-<div class="mkg">${mk.map(([img,cap],i)=>`<figure style="grid-column:1/-1"><div style="aspect-ratio:16/9"><img src="${img}" alt="${cap.replace(/"/g,'’')}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:3px;display:block"></div><figcaption>${cap}</figcaption></figure>`).join('')}</div>
+<div style="margin-top:28px">${row([[IMG.kalCalm,'Shiva, calm — the base hero art'],[IMG.kalBlaze,'Shiva, ignited — the same art, repainted']])}<p style="font-size:15px;color:var(--mute);margin-top:14px;max-width:70ch">Two hand-finished renders of Shiva are the only face art here — calm, and ignited. Nothing is ever drawn on top of the face itself; igniting the third eye is a crossfade between these two real textures, never an added glow.</p></div>
+<div style="margin-top:44px">${row([[IMG.kalVoid,'00:03 — the void, before anything is painted'],[IMG.kalBuild,'00:38 — the face half-painted by smoke'],[IMG.kalComplete,'00:58 — the face complete, the planet shattered']])}<p style="font-size:15px;color:var(--mute);margin-top:14px;max-width:70ch">The smoke doesn’t fade the face in — it paints it, brush stroke by stroke, across the full sixty seconds, reaching complete form only in the final moment. The payoff is the end, not the middle.</p></div>
+<div style="margin-top:44px">${row([[IMG.kalMk3,'Waveform with live beat and drop markers']])}<p style="font-size:15px;color:var(--mute);margin-top:14px;max-width:70ch">Kick and spectral-flux onset detection run in the browser in real time, frame by frame — not a pre-baked cue list — so the planet’s cracks, the embers and the sparkle hits can never fall out of sync with the track.</p></div>
 <section style="margin-top:56px;max-width:60ch"><h2 style="font-weight:300;font-size:clamp(22px,3vw,30px)">Reflection</h2><p style="color:var(--mute);margin-top:14px;line-height:1.6">Rock debris, tried twice, never read as destruction — it just looked like noise. The planet tearing itself apart, with nothing else added, says it better. That was the real lesson: the piece got stronger each time something was taken out, not added.</p></section>
 <a class="nextp" href="#/work/${d.k}" data-h="${h}" style="margin-top:96px"><small style="color:var(--mute)">Back to</small><h2>${d.n}</h2></a></div>${contact()}`}
 
