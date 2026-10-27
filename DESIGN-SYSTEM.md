@@ -41,6 +41,24 @@ Left alone on purpose: colours inside the work itself (ARCEON brand navy, the Di
 
 Not verified: comfort with real users; hover states by eye (checked in the stylesheet, not by screenshots of each).
 
+## Background system: the interference field (Oct 2026)
+
+Concept: the site reinterprets a compositing workspace (the Fusion-inspired origin) as one instrument. The radar already draws a ring every 150px from the headline's full stop. The field keeps that scale: **A** is the radar's own rings, drawn finely (10px) with a major ring every 15th, and **B** is a second emitter (10.5px). Where the two overlap they interfere into curved fringes. Both are warped slightly by low-frequency distortion that grows with radius, so the lines bend instead of forming perfect circles.
+
+Rules:
+1. **Drawn once, never animated** (`fieldDraw`, about 5 ms). The radar's garnet pulse is the only moving element, and it is the same ring system, so nothing competes.
+2. **Asymmetric density.** The field gathers where the radar's origin is (bottom-right of the home hero) or in the top-right of a page hero, and is masked to nothing elsewhere. The viewport edge crops it on purpose.
+3. **Reading zones are adaptive.** `fieldHoles` measures every piece of text under 40px and the field clears itself, with soft edges, around it. Display type (40px and up) may sit over the field. Do not put the field behind small text by adjusting opacity.
+4. **Intensity follows content:** home 1.5, discipline and case-study pages 1.3 and 1.15, About 0.55.
+5. **Home:** floating thumbnails are kept out of the field's core (`HX.fz`) so captions never land on it.
+6. Canvas layers never take pointer events.
+
+Removed as decorative chrome: the 48px full-screen grid, the plus-sign cursor glow, the cursor spotlight orb, the warm background glow, the plus marks and dots the radar pulse used to draw, the scrolling marquee of discipline names, the redundant "Scroll" hint on the ARCEON page, and the tiny tracked-uppercase section labels on About (now ordinary 14px labels).
+
+Kept on purpose: the radar and its pulse, the intro timeline with its timecode (the strongest literal editing-software reference), the Fusion node-graph labels on the Personal Reel page (project content), tile project counts, and all genuine metadata.
+
+Not touched (mobile phase): the phone radar with its crosshair lines.
+
 ## Type roles
 
 | Role | Token | Notes |
