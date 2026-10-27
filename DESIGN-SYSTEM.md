@@ -26,7 +26,7 @@ Idea: warm/cool tension with one saturated colour. Cool slate-blue greys carry e
 | Page | `#000000` | n/a | Canvas |
 | Surfaces | `#0D1014`, `#161B21` | n/a | Tiles, panels (slate-tinted) |
 | Text | `#FFFFFF` | 21.0 | All reading text |
-| Quiet text | `#8C98A6` | 7.2 | Secondary text, captions |
+| Quiet text | `#A2ADBA` | 9.3 | Secondary text, captions |
 | Garnet (accent) | `#C03A4A` | 3.95 (3.25 on darkest surface) | Large type and graphics only |
 | Motion marker | `#6E86A0` | 5.6 | Marker squares, hairlines |
 | Visual marker | `#8199B3` | 7.1 | |
@@ -43,21 +43,24 @@ Not verified: comfort with real users; hover states by eye (checked in the style
 
 ## Background system: the interference field (Oct 2026)
 
-Concept: the site reinterprets a compositing workspace (the Fusion-inspired origin) as one instrument. The radar already draws a ring every 150px from the headline's full stop. The field keeps that scale: **A** is the radar's own rings, drawn finely (10px) with a major ring every 15th, and **B** is a second emitter (10.5px). Where the two overlap they interfere into curved fringes. Both are warped slightly by low-frequency distortion that grows with radius, so the lines bend instead of forming perfect circles.
+Concept: the site reinterprets a compositing workspace (the Fusion-inspired origin) as one instrument. The radar already draws a ring every 150px from the headline's full stop. The field keeps that scale: **A** is the radar's own rings, drawn finely (10px) with a major ring every 15th, flowing slowly outward; **B** is a second emitter (10.5px) that drifts while its rings flow inward. Where they overlap they interfere into curved fringes that converge and disperse.
+
+How it moves (continuous, no input needed): one loop (`fieldTick`, 30 fps) on the existing canvases (`#rg0` home, `#rp0` inner pages). Ring flow (about 3 px/s outward, 2 px/s inward), B's drift, B's ring spacing, the warp phase and the warp amplitude all run on different slow periods, so the pattern evolves instead of translating. The radar's garnet pulse brightens the field rings it crosses (`PULSE.r`). Speeds are in `fieldFrame`; they were set by measurement: much slower is invisible, much faster shimmers.
 
 Rules:
-1. **Drawn once, never animated** (`fieldDraw`, about 5 ms). The radar's garnet pulse is the only moving element, and it is the same ring system, so nothing competes.
-2. **Asymmetric density.** The field gathers where the radar's origin is (bottom-right of the home hero) or in the top-right of a page hero, and is masked to nothing elsewhere. The viewport edge crops it on purpose.
-3. **Reading zones are adaptive.** `fieldHoles` measures every piece of text under 40px and the field clears itself, with soft edges, around it. Display type (40px and up) may sit over the field. Do not put the field behind small text by adjusting opacity.
-4. **Intensity follows content:** home 1.5, discipline and case-study pages 1.3 and 1.15, About 0.55.
-5. **Home:** floating thumbnails are kept out of the field's core (`HX.fz`) so captions never land on it.
-6. Canvas layers never take pointer events.
+1. **Behind everything, never interactive:** canvases have `pointer-events:none` and sit below content.
+2. **Cheap:** about 2 ms per frame. Only rings inside the visible region are drawn, with precomputed angle tables and style strings; no filters. The mask is rendered once and applied by CSS, so a frame only strokes lines.
+3. **Pauses:** when the tab is hidden, when the page is scrolled past the hero band, and on route change. With `prefers-reduced-motion` it draws one still frame and never loops (the radar pulse is also off).
+4. **Asymmetric density.** Detail gathers around the radar's origin (bottom-right of the home hero) or the top-right of a page hero; the viewport edge crops it on purpose.
+5. **Reading zones are adaptive.** `fieldHoles` measures every piece of text under 40px and the mask clears around it. It is measured again after the page settles, because text slides in after load. Display type (40px and up) may sit over the field. Never solve readability by lowering opacity.
+6. **Intensity follows content:** home 1.5, discipline and case-study pages 1.3 and 1.15, About 0.55.
+7. **Home:** floating thumbnails keep out of the field's core (`HX.fz`).
 
-Removed as decorative chrome: the 48px full-screen grid, the plus-sign cursor glow, the cursor spotlight orb, the warm background glow, the plus marks and dots the radar pulse used to draw, the scrolling marquee of discipline names, the redundant "Scroll" hint on the ARCEON page, and the tiny tracked-uppercase section labels on About (now ordinary 14px labels).
+Removed as decorative chrome: the 48px full-screen grid, the plus-sign cursor glow and its glyph asset, the cursor spotlight orb, the warm background glow, the plus marks and dots the radar pulse used to draw, the marquee of discipline names, the homepage identity lines and the "start here" tags and caption squares, the uppercase descriptor and ordinal numbers in the hover preview, the "View" chips on photos, the "Scroll" hint on the ARCEON page, the preloader's ticking timecode, the cycling-colour squares on About chips, the crosshair lines on the phone radar, and dead CSS from an old node-wiring idea (pins, wires, grab and crosshair cursors).
 
-Kept on purpose: the radar and its pulse, the intro timeline with its timecode (the strongest literal editing-software reference), the Fusion node-graph labels on the Personal Reel page (project content), tile project counts, and all genuine metadata.
+Kept on purpose: the radar and its pulse; the intro timeline (clips named after the disciplines, playhead, and the fly-to-tile hand-off) without its timecode; node-style squares on the home tiles and the list dots on About; project counts on tiles; the Fusion node-graph labels on the Personal Reel page and all prototype and diagram text (project content); real metadata.
 
-Not touched (mobile phase): the phone radar with its crosshair lines.
+Not touched (mobile phase): the phone radar rings and the phone work strip.
 
 ## Type roles
 
@@ -71,7 +74,9 @@ Not touched (mobile phase): the phone radar with its crosshair lines.
 | Lead | `--t-lead` | Intro paragraphs. |
 | Body | `--t-body` | 16px / `--lh-body`; line length `--measure`. |
 | Caption | `--t-cap` | 15px — the size the site already uses most. |
-| Note | `--t-note` | 13px DM Mono, `--tr-note`. Margin notes and metadata. |
+| Note | `--t-note` | 14px (was 13). Metadata and the second line of captions. Nothing on the homepage is below 14px. |
+| UI | `--t-ui` | 16px, weight 400. Header nav, back, back-to-top, footer, skip. |
+| Node title | `--t-node` | 18px, weight 400. Titles on the homepage rectangles. |
 
 ## Spacing, layout, images
 
@@ -85,3 +90,13 @@ Not touched (mobile phase): the phone radar with its crosshair lines.
 - Weight 300 ×51, 400 ×31. Radius 3px ×20, 6px ×16, 999px ×11.
 - Transition durations in use: .5s ×20, .4s ×15, .35s ×11, .2s ×10, .3s ×9, .9s ×8, .6s ×6, .8s ×6.
 - Colour was already well tokenised (`--ink`, `--mute`, `--line`, `--o`, `--e` account for most var() uses), which is why the palette change was a handful of root values plus some hardcoded rgba/hex replacements.
+
+## Homepage finalisation (Oct 2026)
+
+Four reading levels on the homepage: **1** the headline (display, weight 300); **2** the line under it (`--t-lead`); **3** rectangle titles and links (`--t-node` 18px / `--t-ui` 16px, weight 400); **4** counts and captions (`--t-cap` 15–16px, `--t-note` 14px). Nothing is smaller than 14px, and quiet text is slate `#A2ADBA`, never a lowered opacity.
+
+**Rectangles:** 232×66 (was 168×52), title 18px, count 16px. After the random layout is placed, `layout()` pushes apart any pair closer than 26px, so no rectangle overlaps another or the headline at any width above 760px (checked over 10 random layouts each at 1440, 1024 and 768).
+
+**Radar → Motion preview (`rvShow`):** when the ring first reaches a rectangle (nearest edge, once per rectangle per pulse) a Motion project from the real project data (`D`, key `motion`, no sub-entries, with a thumbnail) wipes open beside that rectangle in the direction the ring is travelling, with its title and "Motion". One preview at a time; 3.5s cooldown; a shuffled bag cycles through all Motion projects before repeating and never repeats back to back. It places itself away from other rectangles, the headline and the field core, and does nothing if no spot fits or the image fails. Fades after 4.8s or when the pulse ends. Reduced motion: radar and previews are off. Phones (≤760px) have no radar preview; the work strip stays.
+
+**Controls:** header links 16px with a 44px+ hit area (`::before`), back and back-to-top 44px tall with an underline hover, contact links 44px, global 2px focus ring.
