@@ -8,7 +8,7 @@ The thesis is "I notice how things work." Direction A makes that literal: one co
 
 ## Rules that matter more than the values
 
-1. **Orange (`--accent`) means "current" or "next action".** Active nav item, the project being hovered or focused, the primary link. Never decoration.
+1. **Garnet (`--accent`, `#C03A4A`) means "current" or "next action", and only appears large.** It is 3.95:1 on black: fine for large type and graphics, not for small text. Allowed: the headline full stop, underlines and hairlines, markers, the focus ring, type of 24px and up (section numerals, big hover titles). Small text is white or slate, never garnet.
 2. **Weight 300 is the identity.** Headings and body are 300; 400 only for small UI text that needs it; 500 is exceptional.
 3. **Two voices only.** Outfit for everything read; DM Mono for numbers and margin notes. Do not introduce a third.
 4. **Not everything shouts.** Use at most one `--t-hero` or `--t-display` element per screen. Section eyebrows may be uppercase; margin notes are sentence case.
@@ -17,27 +17,29 @@ The thesis is "I notice how things work." Direction A makes that literal: one co
 7. **Touch targets** are at least `--hit` (44px).
 8. **No tints, no beige, no brown, no pastels.** The page is pure black (`--tint:0%`). The old warm peach/blue background glows and per-discipline page washes were removed.
 
-## Palette (Oct 2026, replaces the earlier charcoal / warm off-white / pastel set)
+## Palette (Oct 2026: B2, Garnet & Slate)
 
-Idea: print process colour. Black ink on pure white, with cyan and magenta from the CMYK set, a mid green, an ultramarine, and orange as the single "act" colour. Contrast is measured on `#000`.
+Idea: warm/cool tension with one saturated colour. Cool slate-blue greys carry everything quiet; one deep garnet marks the thing that matters. Chosen over three other directions (verdigris, monochrome, mineral pigments) after rendering all of them on the real pages. Contrast is calculated against `#000`.
 
-| Role | Value | Contrast on black |
-|---|---|---|
-| Page | `#000000` | n/a |
-| Surfaces | `#0C0C0D`, `#161617` | n/a |
-| Text | `#FFFFFF` | 21.0 |
-| Quiet text | `#A6A6A6` (neutral grey) | 8.6 |
-| Accent (current / next action) | `#FF5A1F` | 6.7 |
-| Motion | `#F5139A` magenta | 5.4 |
-| Visual | `#00AEEF` cyan | 8.3 |
-| UI / UX | `#12B76A` green | 8.0 |
-| Photography | `#FFFFFF` | 21.0 |
-| Experiments | `#5B63FF` ultramarine | 4.7 |
-| Typography (hidden) | `#A6A6A6` placeholder | 8.6 |
+| Role | Value | Contrast on black | Use |
+|---|---|---|---|
+| Page | `#000000` | n/a | Canvas |
+| Surfaces | `#0D1014`, `#161B21` | n/a | Tiles, panels (slate-tinted) |
+| Text | `#FFFFFF` | 21.0 | All reading text |
+| Quiet text | `#8C98A6` | 7.2 | Secondary text, captions |
+| Garnet (accent) | `#C03A4A` | 3.95 (3.25 on darkest surface) | Large type and graphics only |
+| Motion marker | `#6E86A0` | 5.6 | Marker squares, hairlines |
+| Visual marker | `#8199B3` | 7.1 | |
+| UI / UX marker | `#9AB0C6` | 9.4 | |
+| Photography marker | `#FFFFFF` | 21.0 | |
+| Experiments marker | `#5A7088` | 4.1 | |
+| Lines | `rgba(150,170,195,.16)` | n/a | Borders, dividers |
 
-Discipline colours appear only as small markers (tile squares, hairlines, section numbers, hover). They never wash the page.
+Disciplines are told apart by label and position, not by hue (the markers are slate steps). Page is pure black; no tints, no beige, no brown, no pastels. Small-text hover states turn white, not garnet.
 
-Left alone on purpose: colours inside the work itself (ARCEON brand navy, the DigiLocker and Recurring app mockups, the Recurring notification timeline's amber and red). Those are project content, not site chrome.
+Left alone on purpose: colours inside the work itself (ARCEON brand navy, the DigiLocker and Recurring app mockups, the Recurring notification timeline's amber and red). The Recurring timeline's blue marker now follows the UI/UX slate because it was recoloured with the site palette.
+
+Not verified: comfort with real users; hover states by eye (checked in the stylesheet, not by screenshots of each).
 
 ## Type roles
 
