@@ -4,3 +4,8 @@ wrangler.jsonc
 .assetsignore
 HANDOFF.md
 DESIGN-SYSTEM.md
+.claude
+img/logos/SOURCES.txt
+CLAUDE.md
+DECISIONS.md
+.playwright-mcp

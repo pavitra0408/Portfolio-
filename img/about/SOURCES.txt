@@ -1,0 +1,11 @@
+ABOUT PAGE IMAGE SOURCES (see manifest.json for full records)
+
+photography: img/about/photography.jpg | File:Photographer Silhouette.jpg | Jakub T. Jankiewicz | CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0 | https://commons.wikimedia.org/wiki/File:Photographer_Silhouette.jpg
+driving: img/about/driving.jpg | File:Table mountain light painting.jpg | Jonathan Beech | CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0 | https://commons.wikimedia.org/wiki/File:Table_mountain_light_painting.jpg
+space: img/about/space.jpg | File:Pillars of Creation (NIRCam Image).jpg | SCIENCE: NASA, ESA, CSA, STScI; IMAGE PROCESSING: Joseph DePasquale (STScI), Anton M. Koekemoer (STScI), Alyssa Pagan (STScI) | Public domain  | https://commons.wikimedia.org/wiki/File:Pillars_of_Creation_(NIRCam_Image).jpg
+biotech: img/about/biotech.jpg | File:HeLa-II.jpg | National Institutes of Health (NIH) | Public domain  | https://commons.wikimedia.org/wiki/File:HeLa-II.jpg
+badminton: img/about/badminton.jpg | File:Lee Chong Wei Prepares To Smash cropped.jpg | Antony Stanley | CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0 | https://commons.wikimedia.org/wiki/File:Lee_Chong_Wei_Prepares_To_Smash_cropped.jpg
+hiking: img/about/hiking.jpg | File:Hiker ridge mountain people trail NPS Photo (16751838183).jpg | Olympic National Park | Public domain  | https://commons.wikimedia.org/wiki/File:Hiker_ridge_mountain_people_trail_NPS_Photo_(16751838183).jpg
+cycling: img/about/cycling.jpg | File:Japan Cup Cycle Road Race 2024 PA200086.jpg | Fukumoto | CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0 | https://commons.wikimedia.org/wiki/File:Japan_Cup_Cycle_Road_Race_2024_PA200086.jpg
+genshin-impact: None | Not downloaded | HoYoverse | Proprietary (all rights reserved) https://genshin.hoyoverse.com/ | https://genshin.hoyoverse.com/
+portrait: img/about/portrait-cutout.png | Own photograph | Pavitra Verma (subject) | Owner  | img/port_colour.jpg (repository)

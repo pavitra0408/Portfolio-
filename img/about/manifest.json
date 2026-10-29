@@ -1,0 +1,106 @@
+[
+ {
+  "subject": "photography",
+  "file": "img/about/photography.jpg",
+  "title": "File:Photographer Silhouette.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Photographer_Silhouette.jpg",
+  "author": "Jakub T. Jankiewicz",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "bytes": 189232,
+  "local_note": "Commons thumbnail, resized to 1400px long edge with sips; no other edits"
+ },
+ {
+  "subject": "driving",
+  "file": "img/about/driving.jpg",
+  "title": "File:Table mountain light painting.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Table_mountain_light_painting.jpg",
+  "author": "Jonathan Beech",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "bytes": 409938,
+  "local_note": "Commons thumbnail, resized to 1400px long edge with sips; no other edits"
+ },
+ {
+  "subject": "space",
+  "file": "img/about/space.jpg",
+  "title": "File:Pillars of Creation (NIRCam Image).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Pillars_of_Creation_(NIRCam_Image).jpg",
+  "author": "SCIENCE: NASA, ESA, CSA, STScI; IMAGE PROCESSING: Joseph DePasquale (STScI), Anton M. Koekemoer (STScI), Alyssa Pagan (STScI)",
+  "license": "Public domain",
+  "license_url": "",
+  "credit": "https://webbtelescope.org/contents/media/images/2022/052/01GF423GBQSK6ANC89NTFJW8VM",
+  "bytes": 498947,
+  "local_note": "Commons thumbnail, resized to 1400px long edge with sips; no other edits"
+ },
+ {
+  "subject": "biotech",
+  "file": "img/about/biotech.jpg",
+  "title": "File:HeLa-II.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:HeLa-II.jpg",
+  "author": "National Institutes of Health (NIH)",
+  "license": "Public domain",
+  "license_url": "",
+  "credit": "National Institutes of Health (NIH)",
+  "bytes": 842353,
+  "local_note": "Commons thumbnail, resized to 1400px long edge with sips; no other edits"
+ },
+ {
+  "subject": "badminton",
+  "file": "img/about/badminton.jpg",
+  "title": "File:Lee Chong Wei Prepares To Smash cropped.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Lee_Chong_Wei_Prepares_To_Smash_cropped.jpg",
+  "author": "Antony Stanley",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "credit": "Flickr: Prepare To Smash!",
+  "bytes": 301167,
+  "local_note": "Commons thumbnail, resized to 1400px long edge with sips; no other edits"
+ },
+ {
+  "subject": "hiking",
+  "file": "img/about/hiking.jpg",
+  "title": "File:Hiker ridge mountain people trail NPS Photo (16751838183).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Hiker_ridge_mountain_people_trail_NPS_Photo_(16751838183).jpg",
+  "author": "Olympic National Park",
+  "license": "Public domain",
+  "license_url": "",
+  "credit": "Hiker_ridge_mountain_people_trail_NPS_Photo",
+  "bytes": 669654,
+  "local_note": "Commons thumbnail, resized to 1400px long edge with sips; no other edits"
+ },
+ {
+  "subject": "cycling",
+  "file": "img/about/cycling.jpg",
+  "title": "File:Japan Cup Cycle Road Race 2024 PA200086.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Japan_Cup_Cycle_Road_Race_2024_PA200086.jpg",
+  "author": "Fukumoto",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "credit": "Own work",
+  "bytes": 571919,
+  "local_note": "Commons thumbnail, resized to 1400px long edge with sips; no other edits"
+ },
+ {
+  "subject": "genshin-impact",
+  "file": null,
+  "title": "Not downloaded",
+  "source": "https://genshin.hoyoverse.com/",
+  "author": "HoYoverse",
+  "license": "Proprietary (all rights reserved)",
+  "license_url": "https://genshin.hoyoverse.com/",
+  "credit": "No official artwork has a licence that permits redistribution on this site; the page links to the official site instead and shows the name typographically."
+ },
+ {
+  "subject": "portrait",
+  "file": "img/about/portrait-cutout.png",
+  "title": "Own photograph",
+  "source": "img/port_colour.jpg (repository)",
+  "author": "Pavitra Verma (subject)",
+  "license": "Owner",
+  "license_url": "",
+  "credit": "Person segmentation with Apple Vision, background removed to transparency, black and white; generated locally"
+ }
+]

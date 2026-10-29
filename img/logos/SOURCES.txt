@@ -1,0 +1,6 @@
+Tool logos used on the About page (stored locally; nothing is loaded from a third party at runtime).
+figma.svg, photoshop.svg, illustrator.svg, after-effects.svg
+  Source: https://github.com/gilbarbara/logos (logos/figma.svg, adobe-photoshop.svg, adobe-illustrator.svg, adobe-after-effects.svg), fetched 2026-10-28. Repository licence: CC0 1.0.
+davinci-resolve.svg
+  Source: https://github.com/simple-icons/simple-icons (icons/davinciresolve.svg), CC0 1.0. Single-colour mark; fill set to #F2F4F7 so it reads on black.
+The marks themselves remain trademarks of Figma, Adobe and Blackmagic Design, shown only to name tools Pavitra uses.
